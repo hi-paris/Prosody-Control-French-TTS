@@ -29,11 +29,10 @@ language = sys.argv[4]
 star_frequency = sys.argv[5]
 romanize = (sys.argv[6] == "True")
 
-
 """
-Ce script Python effectue un alignement forcé CTC (Connectionist Temporal Classification) sur des fichiers audio en utilisant leurs transcriptions,
-en prétraitant d'abord le texte pour supprimer la ponctuation et les symboles non alphanumériques.
-Ensuite, il convertit automatiquement les résultats de l'alignement en fichiers TextGrid, créant ainsi une représentation temporelle précise des mots prononcés dans chaque fichier audio.
+This Python script performs CTC (Connectionist Temporal Classification) forced alignment on audio files using their transcriptions.
+It first preprocesses the text to remove punctuation and non-alphanumeric symbols.
+Then it automatically converts the alignment results into TextGrid files, creating a precise temporal representation of spoken words in each audio file.
 """
 
 
@@ -62,11 +61,11 @@ def txt_to_textgrid(input_file, output_file):
                             label = word.strip()
                             tier.add(start_time, end_time, label)
                         except ValueError:
-                            print(f"Erreur de conversion des temps dans la ligne : {line}")
+                            print(f"Time conversion error in line: {line}")
                     else:
-                        print(f"Format de temps incorrect dans la ligne : {line}")
+                        print(f"Incorrect time format in line: {line}")
                 else:
-                    print(f"Format de ligne incorrect : {line}")
+                    print(f"Incorrect line format: {line}")
 
     tg.append(tier)
     tg.write(output_file)
@@ -81,7 +80,7 @@ def process_files():
             transcription_path = os.path.join(transcription_dir, file_name.replace('.wav', '.txt'))
 
             if not os.path.exists(transcription_path):
-                print(f"Fichier de transcription manquant : {transcription_path}")
+                print(f"Missing transcription file: {transcription_path}")
                 continue
 
             with open(transcription_path, 'r', encoding='utf-8') as f:
@@ -110,7 +109,7 @@ def process_files():
             ctc_output_file = audio_path.replace('.wav', '.txt')
             textgrid_output_file = os.path.join(output_dir, file_name.replace('.wav', '.TextGrid'))
             txt_to_textgrid(ctc_output_file, textgrid_output_file)
-            print(f"Fichier traité : {audio_path} -> {textgrid_output_file}")
+            print(f"Processed file : {audio_path} -> {textgrid_output_file}")
 
 
 if __name__ == '__main__':

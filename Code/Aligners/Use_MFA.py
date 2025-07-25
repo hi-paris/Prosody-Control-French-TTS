@@ -43,9 +43,10 @@ def _create_corpus(audio_directory, transcript_directory, corpus_directory):
 
 
 def _run_mfa_align(audio_directory, transcript_directory, corpus_directory, dictionary_path, acoustic_model_path, output_directory):
+    # Create corpus directory with audio and transcript files
     _create_corpus(audio_directory, transcript_directory, corpus_directory)
 
-    # Run MFA alignment
+    # Execute MFA alignment command
     command = [
         "mfa", "align", corpus_directory.__str__(), dictionary_path.__str__(), acoustic_model_path.__str__(), output_directory.__str__(),
         "--beam", "100", "--retry_beam", "400", "--clean"
@@ -55,8 +56,10 @@ def _run_mfa_align(audio_directory, transcript_directory, corpus_directory, dict
 
 
 def use_mfa(audio_directory, transcript_directory, textgrid_path, corpus_directory):
+    # Ensure output directory exists and run MFA alignment
     os.makedirs(textgrid_path, exist_ok=True)
     _run_mfa_align(audio_directory, transcript_directory, corpus_directory, dictionary_path, acoustic_model_path, textgrid_path)
 
 
+# Execute MFA alignment process
 use_mfa(audio_directory, transcript_directory, textgrid_path, corpus_directory)

@@ -1,0 +1,76 @@
+# filepath: mon_projet_TTS/config.yaml
+# Paths
+data_dir: Data/voice
+code_dir: Code
+out_dir: Out
+azure_key_file: Azure_API_key.txt
+
+# Voice names to process (can be a single string or a list)
+voice_names:
+  - <your_voice_name_here>  # Replace with your voice name, e.g., "Voice1_EP01"
+
+# Azure TTS settings
+azure_voice_name: fr-FR-HenriNeural
+whisper_device: cuda:0
+whisper_model: medium
+azure_region: francecentral
+
+# Silence-split parameters
+silence:
+  min_silence_len: 1000
+  silence_thresh: -50
+  keep_silence: 300
+
+# Prosody adjustment settings
+prosody_settings:
+  baseline_window: 10                            # how many segments to include in each local median; `None` = use all segments
+  # PITCH
+  pitch_semitones: 1.3                          # Max pitch adjustment ± semitones
+  pitch_lower_clip_factor: 0.7                  # Lower clip factor for pitch adjustment
+  pitch_offset_semitones:  5.0                  # shift mean (1 for female voice, 0 for male)
+  # VOLUME
+  # volume_db: 4.0                              # Max volume adjustment ± dB
+  volume_pct: 10.0                              # Max volume adjustment ± %
+  # RATE
+  rate_percent: 10.0                            # Max rate adjustment ± %
+  threshold_duration_before_slowing_down: 1.0   # only apply beyond 1 second
+  slow_floor_per_sec: 2.0                       # enforce −2 % slowdown per extra second
+  # SMOOTHING
+  smoothing_alpha: 0.2                          # Smoothing factor (lower = more smoothing)
+  max_jump_percent: 8                           # Max % change between segments for pitch/rate
+  # Pause settings
+  end_punctuation_pause_ms: 500                 # Pause added after , ? !
+  inter_syntagme_pause_factor: 1                # Pause between syntagmes (0.5=50% of the original pause), 0.7
+
+# Which steps to run. Set null or omit to run all in order:
+steps_to_run:
+  # - Preprocess            # Preprocess the original audio
+  - Align+Transcribe        # Transcribe the original audio
+  - Raw Synthesis           # Synthesize the original audio without any prosody adxitjustments
+  - Measure & Build SSML    # Analyse the original audio and build the SSML for the synthetic audio
+  - Synthesize+Merge        # Synthesize the improved synhtetic audio
+  - Export JSON             # Export the training data as a JSON file
+  - Final Transcribe        # Transcribe the final audio
+  - Compare Breaks          # Compare breaks between original and generated audio (still not completely functional)
+
+# Enable multiprocessing for voice folders
+multiprocessing: True # Set to False to run sequentially
+num_processes: 5 # Number of processes to use for multiprocessing, please note that each process will load one copy of the model! --> four processes will already take up around 24GB of GPU RAM
+
+
+# AB-test settings
+# This section is used to prepare pairs of audio files for an AB test
+# Script: Code/prepare_AB_test.py
+ab_test:
+  # List of voice names to include in AB test; null means “all voices in Out/results”
+  voices:
+    # - <your_voice_name_here>  # Replace with your voice name, e.g., "Voice1_EP01"
+
+  # Number of (raw, improved) pairs to prepare
+  num_pairs: 44
+  # Target duration per pair in seconds
+  target_duration_s: 60
+  # Acceptable margin ± seconds
+  margin_s: 15
+  # Output directory for AB-test pairs (relative to project root)
+  output_dir: Out/AB_test

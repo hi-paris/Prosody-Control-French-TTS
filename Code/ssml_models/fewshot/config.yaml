@@ -1,0 +1,21 @@
+# config.yaml – everything in one place
+data_path:  "../../../Out/results/bdd_full.json" #"men_voices_sample.json"     # path to your JSON data
+output_dir: "results"
+
+model_names: ["mistral", "llama3", "qwen3:8b", "granite3.3", "deepseek-r1:32b", "qwen3:32b", "qwen2.5:7b"]
+temperature: null
+ollama_url: "http://localhost:11434"                  # e.g. "http://localhost:11434"
+keep_alive: "5m"
+num_gpu: -1                       # Number of GPUs to use (0 for CPU only)
+num_batch: 3000                   # Batch size for prompt processing
+num_ctx: 3000                     # Context window size (smaller = faster)
+
+num_samples: 1000                  # how many test items per model
+max_examples: 10                  # few‑shot only – (leave for now)
+mode: "both"                      # "zero-shot" | "few-shot" | "both"
+break_position_threshold: 0
+prosody_position_threshold: 0
+
+worker_processes: 7              # processes (per model); 0/NULL → cpu‑count
+parallel_requests: 5             # threads per process hitting Ollama
+debug: false

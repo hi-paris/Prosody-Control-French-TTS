@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #34495e;
+  }
+  
+  .plot {
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  audio {
+    border-radius: 5px;
+  }
+  
+  .spinner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .hi-paris-logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.1);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  
+  .hi-paris-logo:hover {
+    opacity: 1;
+  }
+  
+  

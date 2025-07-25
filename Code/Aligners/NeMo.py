@@ -6,12 +6,12 @@ import soundfile
 import sys
 
 """
-Pour utiliser ce programme, il faut installer nemo: https://github.com/NVIDIA/NeMo/tree/main
-Changes path_to_nemo
-Crees un nouvel environement virtuel avec python 3.11.10 que t appelles NFA
+To use this program, you need to install nemo: https://github.com/NVIDIA/NeMo/tree/main
+Change path_to_nemo
+Create a new virtual environment with python 3.11.10 that you name NFA
 Run `setup.py`
-Y aura peut etre besoin d 1 ou 2 pip install que tu verras en lanceant le code (ce sont des pip install sur NFA, pas venv-TTS):
-    venv-TTS utilises la version 12.4 de python, mais je n'ai pas trouvé de moyen d isntaller et faire marcher NeMo avec cette version
+You might need 1 or 2 pip installs that you'll see when running the code (these are pip installs on NFA, not venv-TTS):
+    venv-TTS uses version 12.4 of python, but I haven't found a way to install and make NeMo work with this version
 """
 
 path_to_nemo = "../NeMo"

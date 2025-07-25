@@ -3,7 +3,7 @@
 data_dir: Data/voice
 code_dir: Code
 out_dir: Out
-azure_key_file: Azure_API_key.txt
+azure_key_file: ${AZURE_API_KEY}
 
 # Voice names to process (can be a single string or a list)
 voice_names:

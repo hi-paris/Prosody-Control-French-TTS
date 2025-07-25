@@ -798,13 +798,12 @@ class SynchronizedSSMLPipeline:
     
 
 if __name__ == "__main__":
-    # Paramètres définis en dur
     pipeline = SynchronizedSSMLPipeline(
         dir_name="/root/mon_projet_TTS/mon_projet_TTS/Data/voice/Aznavour_EP01",
         base_dir="os.path.join(os.path.dirname(os.path.abspath(__file__))",
         out_dir=None,  # Laisse à None si tu veux les chemins par défaut
         data_dir=None,  # Pareil ici
-        api_key= "Be3j8kmplJvJNVgBnwrnXMNSABCQKD2kPyiDd9U4HR9U1l0xm43LJQQJ99BAAC5T7U2XJ3w3AAAAACOGlKVG",  # Ou colle ta clé directement ici
+        api_key= None,
         region="francecentral",
         voice="fr-FR-HenriNeural",
         style=None,

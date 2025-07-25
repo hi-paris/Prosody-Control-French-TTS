@@ -132,7 +132,7 @@ If you use this code or models in your research, please cite:
 ```bibtex
 @misc{ould-ouali2025improving,
   title={Improving Synthetic Speech Quality via SSML Prosody Control},
-  author={Ould-Ouali, Nassima and Horstmann, Tim Luka and Dauvet, Jonah and Bueno, Ruben and Sani, Awais and Moulines, Eric},
+  author={Ould-Ouali, Nassima and Sani, Awais and Horstmann, Tim Luka and Dauvet, Jonah and Bueno, Ruben and Moulines, Eric},
   year={2025}
 }
 ```
@@ -150,7 +150,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For questions or feedback, please contact:
 
 - Nassima Ould-Ouali: nassima.ould-ouali@polytechnique.edu
+- Awais Sani : awais.sani@ip-paris.fr
 - Tim Luka Horstmann: tim.horstmann@ip-paris.fr
+- Ruben Bueno : ruben.bueno@polytechnique.edu
 - Jonah Dauvet: jonah.dauvet@mail.mcgill.ca
 
 ---

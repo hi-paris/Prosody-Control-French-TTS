@@ -203,7 +203,7 @@ class VoicePipeline:
 
         # Load SpaCy French model for parsing trees
         self.nlp = spacy.load("fr_core_news_sm")
-        self.api_key = Path(BASE_DIR, "Azure_API_key.txt").read_text(encoding="utf-8").strip()
+        self.api_key = 
 
         # Directories for data usage
         self.Input_dir = os.path.join(DATA_DIR, 'voice', self.dir_name)

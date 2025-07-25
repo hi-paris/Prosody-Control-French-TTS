@@ -156,7 +156,7 @@ class Voc:
         self.pitch_nat_moyen = ...
         # Load SpaCy French model for sparsedtrees
         self.nlp = fr_core_news_sm.load()
-        self.api_key = open(os.path.join(base_dir, "Azure_API_key.txt"), "r").read().strip()
+        self.api_key = 
 
         # -------------------
         # Directories:

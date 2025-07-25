@@ -803,7 +803,7 @@ if __name__ == "__main__":
         base_dir="os.path.join(os.path.dirname(os.path.abspath(__file__))",
         out_dir=None,  # Laisse à None si tu veux les chemins par défaut
         data_dir=None,  # Pareil ici
-        api_key= None,
+        api_key=os.environ.get('AZURE_API_KEY'),  
         region="francecentral",
         voice="fr-FR-HenriNeural",
         style=None,

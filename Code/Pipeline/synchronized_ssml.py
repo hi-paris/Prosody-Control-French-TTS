@@ -144,7 +144,7 @@ class SynchronizedSSMLPipeline:
     def _load_api_key(self):
         """Charge la clé API Azure depuis un fichier."""
         try:
-            api_key_path = os.path.join(self.base_dir, "Azure_API_key.txt")
+            api_key_path = os.path.join(self.base_dir, os.environ.get('AZURE_API_KEY'))
             with open(api_key_path, "r") as f:
                 return f.read().strip()
         except FileNotFoundError:

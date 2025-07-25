@@ -59,7 +59,7 @@ We recommend using **Ubuntu 22.04.3** or similar for best compatibility.
    - Place it in a folder named `Tools` at the root of the repository (`prosodyControl/Tools/`)
 
 4. **Add your Azure TTS API key:**
-   - Create a file called `Azure_API_key.txt` at the root of the repository
+   -  at the root of the repository
    - Paste your Azure API key into this file
 
 ---
@@ -87,7 +87,7 @@ prosodyControl/
 │
 ├── config.yaml                    # Main configuration file for the pipeline
 ├── tts-env.yml                    # Conda environment specification
-├── Azure_API_key.txt              # Your Azure TTS API key (not tracked)
+├── Azure_API_key.txt              # Use environment variables instead
 ├── README.md                      # This file
 ```
 

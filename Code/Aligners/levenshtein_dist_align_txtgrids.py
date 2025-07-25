@@ -9,6 +9,7 @@ import re
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def list_to_textgrid(L, name="words"):
+    """Convert a list of intervals to a TextGrid object"""
     L = sorted(L, key=lambda x: x[1])
     adjusted_L = []
     last_max = 0.0
@@ -31,6 +32,7 @@ def list_to_textgrid(L, name="words"):
     return tg
 
 def normalize_word(word):
+    """Normalize word by removing accents, punctuation, and converting to lowercase"""
     normalized = unidecode(word)
     normalized = normalized.replace(" ", "")
     for symbol in [".", ", ", "!", "?", ";", ":", "-"]:
@@ -40,13 +42,13 @@ def normalize_word(word):
 
 def levenshtein_distance(s1, s2):
     """
-    Calcule efficacement la distance de Levenshtein entre deux chaînes.
+    Efficiently calculate the Levenshtein distance between two strings.
     Args:
-        s1 (str): première chaîne
-        s2 (str): deuxième chaîne
+        s1 (str): first string
+        s2 (str): second string
 
     Returns:
-        int: distance de Levenshtein
+        int: Levenshtein distance
     """
     if len(s1) < len(s2):
         return levenshtein_distance(s2, s1)
@@ -68,30 +70,33 @@ def levenshtein_distance(s1, s2):
     return previous_row[-1]
 
 def extract_transcription_from_textgrid(tg_path, output_txt_path):
+    """Extract transcription from a TextGrid file and save to text file"""
     try:
         tg = textgrid.TextGrid.fromFile(tg_path)
         words = [interval.mark for interval in tg[0] if interval.mark.strip()]
         transcription = re.sub(r'\s+', ' ', " ".join(words)).strip()
         with open(output_txt_path, 'w', encoding='utf-8') as f:
             f.write(transcription)
-        logging.info(f"Transcription extraite dans {output_txt_path}")
+        logging.info(f"Transcription extracted to {output_txt_path}")
         return True
     except Exception as e:
-        logging.error(f"Erreur extraction transcription : {e}")
+        logging.error(f"Error extracting transcription: {e}")
         return False
 
 def update_transcription(textgrid_path, transcription_dir):
+    """Update transcription file based on aligned TextGrid"""
     try:
         base_name = os.path.basename(textgrid_path).replace(".TextGrid", "")
         txt_path = os.path.join(transcription_dir, f"{base_name}.txt")
         if extract_transcription_from_textgrid(textgrid_path, txt_path):
-            logging.info(f"Transcription mise à jour : {base_name}")
+            logging.info(f"Transcription updated: {base_name}")
         else:
-            logging.warning(f"Échec mise à jour : {base_name}")
+            logging.warning(f"Update failed: {base_name}")
     except Exception as e:
-        logging.error(f"Erreur mise à jour transcription : {e}")
+        logging.error(f"Error updating transcription: {e}")
 
 def main(textgrid1_input_path, textgrid2_input_path, transcription1_dir=None, transcription2_dir=None):
+    """Main function to align two TextGrid files using Levenshtein distance"""
     logging.info(f"Processing {textgrid1_input_path}, {textgrid2_input_path}")
 
     tg1 = textgrid.TextGrid.fromFile(textgrid1_input_path)
@@ -150,7 +155,7 @@ def main(textgrid1_input_path, textgrid2_input_path, transcription1_dir=None, tr
     if transcription2_dir:
         update_transcription(textgrid2_input_path, transcription2_dir)
 
-    logging.info("Alignement terminé avec succès.")
+    logging.info("Alignment completed successfully.")
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:

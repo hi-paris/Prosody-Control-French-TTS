@@ -45,7 +45,7 @@ We recommend using **Ubuntu 22.04.3** or similar for best compatibility.
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/NassimaOULDOUALI/Prosody-Control-French-TTS
-   cd prosodyControl
+ 
    ```
 
 2. **Create the conda environment:**

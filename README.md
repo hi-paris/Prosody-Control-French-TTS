@@ -130,10 +130,14 @@ All models and scripts are referenced in the paper and can be used or extended f
 If you use this code or models in your research, please cite:
 
 ```bibtex
-@misc{ould-ouali2025improving,
-  title={Improving Synthetic Speech Quality via SSML Prosody Control},
-  author={Ould-Ouali, Nassima and Sani, Awais and Horstmann, Tim Luka and Dauvet, Jonah and Bueno, Ruben and Moulines, Eric},
-  year={2025}
+@inproceedings{ould-ouali2025_icnlsp,
+  title     = {Improving Synthetic Speech Quality via SSML Prosody Control},
+  author    = {Ould-Ouali, Nassima and Sani, Awais and Horstmann, Tim Luka and Dauvet, Jonah and Bueno, Ruben and Moulines, Eric},
+  booktitle = {Proceedings of the 8th International Conference on Natural Language and Speech Processing (ICNLSP)}, % TODO: vérifier l'intitulé exact utilisé par la conf
+  year      = {2025},
+  pages     = {XX--YY},   % TODO
+  publisher = {—},        % TODO 
+  address   = {—}         % TODO
 }
 ```
 

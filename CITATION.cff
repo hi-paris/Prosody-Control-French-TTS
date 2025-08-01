@@ -15,7 +15,7 @@ authors:
     given-names: Ruben
   - family-names: Moulines
     given-names: Eric
-version: v1.0.0   # ou le tag exact que tu publies
+version: v1.0.0   
 repository-code: "https://github.com/hi-paris/Prosody-Control-French-TTS"
 preferred-citation:
   type: inproceedings
@@ -34,4 +34,4 @@ preferred-citation:
     - family-names: Moulines
       given-names: Eric
   year: 2025
-  collection-title: "Proceedings of the 8th International Conference on Natural Language and Speech Processing (ICNLSP)"  # TODO: confirmer l’intitulé exact
+  collection-title: "Proceedings of the 8th International Conference on Natural Language and Speech Processing (ICNLSP)" 

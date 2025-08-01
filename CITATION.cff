@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+title: Prosody-Control-French-TTS
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Ould-Ouali
+    given-names: Nassima
+  - family-names: Sani
+    given-names: Awais
+  - family-names: Horstmann
+    given-names: Tim Luka
+  - family-names: Dauvet
+    given-names: Jonah
+  - family-names: Bueno
+    given-names: Ruben
+  - family-names: Moulines
+    given-names: Eric
+version: v1.0.0   # ou le tag exact que tu publies
+repository-code: "https://github.com/hi-paris/Prosody-Control-French-TTS"
+preferred-citation:
+  type: inproceedings
+  title: Improving Synthetic Speech Quality via SSML Prosody Control
+  authors:
+    - family-names: Ould-Ouali
+      given-names: Nassima
+    - family-names: Sani
+      given-names: Awais
+    - family-names: Horstmann
+      given-names: Tim Luka
+    - family-names: Dauvet
+      given-names: Jonah
+    - family-names: Bueno
+      given-names: Ruben
+    - family-names: Moulines
+      given-names: Eric
+  year: 2025
+  collection-title: "Proceedings of the 8th International Conference on Natural Language and Speech Processing (ICNLSP)"  # TODO: confirmer l’intitulé exact

@@ -7,12 +7,12 @@ authors:
     given-names: Nassima
   - family-names: Sani
     given-names: Awais
-  - family-names: Horstmann
-    given-names: Tim Luka
-  - family-names: Dauvet
-    given-names: Jonah
   - family-names: Bueno
     given-names: Ruben
+  - family-names: Dauvet
+    given-names: Jonah
+  - family-names: Horstmann
+    given-names: Tim Luka
   - family-names: Moulines
     given-names: Eric
 version: v1.0.0   
@@ -25,12 +25,12 @@ preferred-citation:
       given-names: Nassima
     - family-names: Sani
       given-names: Awais
-    - family-names: Horstmann
-      given-names: Tim Luka
-    - family-names: Dauvet
-      given-names: Jonah
     - family-names: Bueno
       given-names: Ruben
+    - family-names: Dauvet
+      given-names: Jonah
+    - family-names: Horstmann
+      given-names: Tim Luka
     - family-names: Moulines
       given-names: Eric
   year: 2025

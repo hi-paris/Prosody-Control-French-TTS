@@ -132,7 +132,7 @@ If you use this code or models in your research, please cite:
 ```bibtex
 @inproceedings{ould-ouali2025_icnlsp,
   title     = {Improving Synthetic Speech Quality via SSML Prosody Control},
-  author    = {Ould-Ouali, Nassima and Sani, Awais and Horstmann, Tim Luka and Dauvet, Jonah and Bueno, Ruben and Moulines, Eric},
+  author    = {Ould-Ouali, Nassima and Sani, Awais and Bueno, Ruben and Dauvet, Jonah and Horstmann, Tim Luka and Moulines, Eric},
   booktitle = {Proceedings of the 8th International Conference on Natural Language and Speech Processing (ICNLSP)}, % TODO: vérifier l'intitulé exact utilisé par la conf
   year      = {2025},
   pages     = {XX--YY},   % TODO

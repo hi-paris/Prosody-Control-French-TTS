@@ -155,8 +155,8 @@ For questions or feedback, please contact:
 
 - Nassima Ould-Ouali: nassima.ould-ouali@polytechnique.edu
 - Awais Sani : awais.sani@ip-paris.fr
-- Tim Luka Horstmann: tim.horstmann@ip-paris.fr
 - Ruben Bueno : ruben.bueno@polytechnique.edu
 - Jonah Dauvet: jonah.dauvet@mail.mcgill.ca
+- Tim Luka Horstmann: tim.horstmann@ip-paris.fr
 - Eric Moulines : eric.moulines@polytechnique.edu
 ---

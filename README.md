@@ -127,16 +127,24 @@ All models and scripts are referenced in the paper and can be used or extended f
 
 ## Citation
 
-If you use this code or models in your research, please cite:
+Paper is available :
 
-```bibtex
-@inproceedings{ould-ouali2025_improving,
-  title     = {Improving Synthetic Speech Quality via SSML Prosody Control},
-  author    = {Ould-Ouali, Nassima and Sani, Awais and Bueno, Ruben and Dauvet, Jonah and Horstmann, Tim Luka and Moulines, Eric},
-  booktitle = {Proceedings of the 8th International Conference on Natural Language and Speech Processing (ICNLSP)}, % TODO: vérifier l'intitulé exact utilisé par la conf
-  year      = {2025}
+[Improving French Synthetic Speech Quality via SSML Prosody Control](https://arxiv.org/abs/2508.17494)
+
+If you use this model, please cite the paper.
+
+```
+@misc{ouali2025improvingfrenchsyntheticspeech,
+      title={Improving French Synthetic Speech Quality via SSML Prosody Control}, 
+      author={Nassima Ould Ouali and Awais Hussain Sani and Ruben Bueno and Jonah Dauvet and Tim Luka Horstmann and Eric Moulines},
+      year={2025},
+      eprint={2508.17494},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2508.17494}, 
 }
 ```
+
 
 ---
 

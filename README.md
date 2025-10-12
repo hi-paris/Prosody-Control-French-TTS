@@ -134,15 +134,26 @@ Paper is available :
 If you use this model, please cite the paper.
 
 ```
-@misc{ouali2025improvingfrenchsyntheticspeech,
-      title={Improving French Synthetic Speech Quality via SSML Prosody Control}, 
-      author={Nassima Ould Ouali and Awais Hussain Sani and Ruben Bueno and Jonah Dauvet and Tim Luka Horstmann and Eric Moulines},
-      year={2025},
-      eprint={2508.17494},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2508.17494}, 
+@inproceedings{ouali-etal-2025-improving,
+    title = "Improving {F}rench Synthetic Speech Quality via {SSML} Prosody Control",
+    author = "Ouali, Nassima Ould  and
+      Sani, Awais Hussain  and
+      Bueno, Ruben  and
+      Dauvet, Jonah  and
+      Horstmann, Tim Luka  and
+      Moulines, Eric",
+    editor = "Abbas, Mourad  and
+      Yousef, Tariq  and
+      Galke, Lukas",
+    booktitle = "Proceedings of the 8th International Conference on Natural Language and Speech Processing (ICNLSP-2025)",
+    month = aug,
+    year = "2025",
+    address = "Southern Denmark University, Odense, Denmark",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.icnlsp-1.30/",
+    pages = "302--314"
 }
+
 ```
 
 

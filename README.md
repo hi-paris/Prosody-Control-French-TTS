@@ -3,8 +3,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![Conda environment](https://img.shields.io/badge/conda-env-green.svg)](https://docs.conda.io/)
-
+[![Paper](https://img.shields.io/badge/📄-Paper-important)](https://aclanthology.org/2025.icnlsp-1.30/)
+[![Demo](https://img.shields.io/badge/🎧-Live_Demo-success)](https://hi-paris.github.io/DemoTTS/)
+[![HF Models](https://img.shields.io/badge/🤗-HuggingFace_Models-yellow)](https://huggingface.co/hi-paris/ssml-text2breaks-fr-lora)
 ---
+
+## 📝 Abstract
 
 This repository contains the code and models for the paper:
 
@@ -12,39 +16,45 @@ This repository contains the code and models for the paper:
 
 We present a novel, end-to-end pipeline for enhancing the prosody of French synthetic speech using SSML (Speech Synthesis Markup Language) tags. Our approach leverages both supervised and large language model (LLM) methods to automatically annotate text with prosodic cues (pitch, volume, rate, and pauses), significantly improving the naturalness and expressiveness of TTS output.
 
+
+## 🚀 Quick Links
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1K3bcLHRfbSy9syWRZR6D0hyTb5lqivGi)
+[![Demo](https://img.shields.io/badge/🎧-Live_Demo-success)](https://hi-paris.github.io/DemoTTS/)
+
 ---
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Models](#models)
-- [Citation](#citation)
-- [License](#license)
-- [Contact](#contact)
-
+- [🌟 Overview](#-overview)
+- [⚡ Installation](#-installation)
+- [🏗️ Project Structure](#️-project-structure)
+- [🎮 Usage](#-usage)
+- [🤖 Models](#-models)
+- [📊 Demo](#-demo)
+- [📚 Citation](#-citation)
+- [📄 License](#-license)
+- [📬 Contact](#-contact)
 ---
 
 ## Overview
 
 Despite advances in TTS, synthetic French voices often lack natural prosody, especially in expressive contexts. This project provides:
 
-- An **SSML annotation pipeline** (`audioPipeline.py`) for French speech, aligning audio and text, extracting prosodic features, and generating SSML markup.
-- **Baseline models** (BERT, BiLSTM) for prosody and break prediction.
-- **LLM-based models** (zero-shot, few-shot, and our novel cascaded Qwen approach) for automatic SSML tag generation.
-- Example data and configuration for reproducible experiments.
+- 🎵 **SSML Annotation Pipeline** (`audioPipeline.py`) for French speech
+- 📊 **Baseline Models** (BERT, BiLSTM) for prosody and break prediction  
+- 🧠 **LLM-based Models** (zero-shot, few-shot, and cascaded Qwen)
+- 📁 Example data and configuration for reproducible experiments
+
 
 ---
 
-## Installation
+## ⚡Installation
 
 We recommend using **Ubuntu 22.04.3** or similar for best compatibility.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/NassimaOULDOUALI/Prosody-Control-French-TTS
+   git clone https://github.com/hi-paris/Prosody-Control-French-TTS
  
    ```
 
@@ -70,7 +80,7 @@ We recommend using **Ubuntu 22.04.3** or similar for best compatibility.
 prosodyControl/
 │
 ├── Code/
-│   ├── audioPipeline.py           # Main SSML annotation pipeline
+│   ├── audioPipeline.py           # Main SSML pipeline
 │   ├── audioPipeline_legacy.py    # Legacy pipeline scripts
 │   ├── pipeline_class_legacy.py   # Legacy pipeline class
 │   ├── prepare_AB_test.py         # AB test preparation script
@@ -99,7 +109,7 @@ prosodyControl/
 
 ---
 
-## Usage
+##  🎮 Usage
 
 All pipeline settings are controlled via [`config.yaml`](config.yaml). This includes data paths, voice names, Azure TTS settings, prosody parameters, and which steps to run.
 
@@ -116,7 +126,7 @@ python Code/audioPipeline.py
 
 ---
 
-## Models
+## 🤖 Models
 
 - **Baselines**: See `Code/baseline_models/` for BERT and BiLSTM models for pause and prosody prediction.
 - **LLM Approaches**: See `Code/ssml_models/` for zero-shot, few-shot, and cascaded Qwen-based models for SSML tag generation.
@@ -125,11 +135,11 @@ All models and scripts are referenced in the paper and can be used or extended f
 
 ---
 
-## Citation
+## 📚 Citation
 
 Paper is available :
 
-[Improving French Synthetic Speech Quality via SSML Prosody Control](https://arxiv.org/abs/2508.17494)
+[Improving French Synthetic Speech Quality via SSML Prosody Control](https://aclanthology.org/2025.icnlsp-1.30/)
 
 If you use this model, please cite the paper.
 
@@ -155,7 +165,11 @@ If you use this model, please cite the paper.
 }
 
 ```
+<div align="center">
+   
+⭐ Don't forget to star this repo if you find it useful!
 
+</div> ```
 
 ---
 
@@ -165,14 +179,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-## Contact
 
-For questions or feedback, please contact:
+## 📬 Contact
 
-- Nassima Ould-Ouali: nassima.ould-ouali@polytechnique.edu
-- Awais Sani : awais.sani@ip-paris.fr
-- Ruben Bueno : ruben.bueno@polytechnique.edu
-- Jonah Dauvet: jonah.dauvet@mail.mcgill.ca
-- Tim Luka Horstmann: tim.horstmann@ip-paris.fr
-- Eric Moulines : eric.moulines@polytechnique.edu
+**Nassima Ould-Ouali**  
+[![Email](https://img.shields.io/badge/Email-nassima.ould--ouali%40polytechnique.edu-blue?style=flat-square&logo=gmail)](mailto:nassima.ould-ouali@polytechnique.edu)
 ---

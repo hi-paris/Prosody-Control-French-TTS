@@ -183,5 +183,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 📬 Contact
 
 **Nassima Ould-Ouali**  
-[![Email](https://img.shields.io/badge/Email-nassima.ould--ouali%40polytechnique.edu-blue?style=flat-square&logo=gmail)](mailto:nassima.ould-ouali@polytechnique.edu)
+[![Email](https://img.shields.io/badge/Email-nassima.ould--ouali%40polytechnique.edu-blue?style=flat-square&logo=gmail)](mailto:nassima.ould-ouali@ip-paris.fr)
 ---

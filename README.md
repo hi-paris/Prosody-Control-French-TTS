@@ -30,7 +30,7 @@ We present a novel, end-to-end pipeline for enhancing the prosody of French synt
 - [🏗️ Project Structure](#️-project-structure)
 - [🎮 Usage](#-usage)
 - [🤖 Models](#-models)
-- [📊 Demo](#-demo)
+- [📊 Demo](#-https://hi-paris.github.io/DemoTTS/)
 - [📚 Citation](#-citation)
 - [📄 License](#-license)
 - [📬 Contact](#-contact)
